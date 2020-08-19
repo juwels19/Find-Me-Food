@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This web-app will generate a random restaurant within a certain vicinity of a location of choice.
 
-Things you may want to cover:
+Utilizes a login and signup system so users can log-in in order to rate restaurants generated for them.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+As the user rates more restaurants, restaurants will be presented to the user based on their previous ratings.
