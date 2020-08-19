@@ -14,6 +14,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
+    session.delete(:user_id)
     session[:user_id] = nil
     redirect_to login_url, notice: "Successfully logged out!"
   end

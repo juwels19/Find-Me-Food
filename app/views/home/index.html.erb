@@ -1,5 +1,10 @@
 <p id=”notice”><%= notice %></p>
 <h1>Find Me Food!</h1>
-<p>Welcome to Find Me Food! Please login or sign up below to store your results!</p>
-<%= link_to "Login", login_path %> |
-<%= link_to "Sign Up", signup_path%>
+<% if !current_user%>
+    <p>Welcome to Find Me Food! Please login or sign up below to store your results!</p>
+    <%= link_to "Login", login_path %> |
+    <%= link_to "Sign Up", signup_path%>
+<% else %>
+    <p>Currently logged in as <%= current_user.email %>. <%= link_to "Log Out", logout_path %></p>
+
+<% end %>
