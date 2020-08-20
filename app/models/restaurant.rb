@@ -7,6 +7,11 @@ class Restaurant < ApplicationRecord
     validates :genre, presence: true
 
     def avg_rating
-         
+        return 0 if ratings.count == 0
+        sum = 0
+        ratings.each do |rating|
+            sum += rating.rating
+        end
+        return sum.to_f / ratings.count
     end
 end
